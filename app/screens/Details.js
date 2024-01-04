@@ -21,7 +21,7 @@ export default function Details() {
                             <BackIcon/>
                         </Pressable>
                         <View className="flex w-4/6 items-center  justify-center ">
-                            <Text className="font-semibold text-lg">Details</Text>
+                            <Text style={{fontFamily:'Poppins-Regular'}} className="font-semibold text-lg">Details</Text>
                         </View>
                     </View>
                 </View>
@@ -38,7 +38,7 @@ export default function Details() {
                           className="bg-white rounded-b-lg border-b border-2 border-[#F1F1F1] shadow-xl ">
                         <View className="px-5">
                             <View className="flex flex-row justify-between py-4">
-                                <Text className="text-2xl font-bold">{name}</Text>
+                                <Text style={{fontFamily:'Poppins-Medium'}} className="text-2xl font-bold">{name}</Text>
                                 <View className="p-2 bg-[#6D9E3F]  rounded-lg">
                                     <Text className="text-white font-bold">Wholesale</Text>
 
@@ -46,22 +46,22 @@ export default function Details() {
                             </View>
                             <View
                                 className="flex flex-row justify-between items-center pb-3  border-b border-1 border-[#F1F1F1]">
-                                <Text className="text-sm text-lightGray">Seller: <Text
+                                <Text style={{fontFamily:'Poppins-Regular'}} className="text-sm text-lightGray">Seller: <Text
                                     className="text-sm text-darkGray">{seller}</Text> </Text>
                                 <View className="flex flex-row space-x-2 items-center py-2">
                                     <Image source={require('../../assets/HomeImages/stars.png')}/>
-                                    <Text>(92)</Text>
+                                    <Text style={{fontFamily:'Poppins-Regular'}}>(92)</Text>
                                 </View>
                             </View>
                             <View className="py-4 ">
-                                <Text className="text-sm text-lightGray">{desc}</Text>
+                                <Text style={{fontFamily:'Poppins-Regular'}} className="text-sm text-lightGray">{desc}</Text>
                             </View>
                         </View>
                         <View className="bg-lightGreen">
                             <View className="flex flex-row space-x-1 items-center  p-5">
-                                <Text className="font-bold text-xl"> ₦{amount} </Text>
+                                <Text style={{fontFamily:'Poppins-SemiBold'}} className="font-bold text-xl"> ₦{amount} </Text>
 
-                                <Text className="italic text-lightGray">
+                                <Text style={{fontFamily:'Poppins-Italic'}} className="italic text-lightGray">
                                     (Per ton)
                                 </Text>
                             </View>
@@ -71,25 +71,25 @@ export default function Details() {
                     <View>
                         <View className="w-full flex flex-row items-center justify-center my-4">
                             <View className="w-20 h-1 bg-[#EAEAEA]"></View>
-                            <Text className="text-sm text-[#585858]"> WAREHOUSE INFORMATION </Text>
+                            <Text  style={{fontFamily:'Poppins-Medium'}} className="text-sm text-[#585858]"> WAREHOUSE INFORMATION </Text>
                             <View className="w-20 h-1 bg-[#EAEAEA]"></View>
                         </View>
 
                         <View style={{elevation: 8}}
                               className="bg-white rounded-lg border border-2 border-[#F1F1F1] shadow-xl p-5 ">
                             <View>
-                                <Text className="text-[#004D24] text-sm font-bold">Warehouse distribution</Text>
+                                <Text style={{fontFamily:'Poppins-Medium'}} className="text-[#004D24] text-sm font-bold">Warehouse distribution</Text>
                                 <View className="flex flex-row justify-between">
-                                    <Text className="text-lg text-[#898B87]">Gennee Warehousing</Text>
-                                    <Text className="text-lg text-[#1F1F1F]">20.00 Ton</Text>
+                                    <Text style={{fontFamily:'Poppins-Regular'}} className="text-lg text-[#898B87]"> Gennee Warehousing</Text>
+                                    <Text style={{fontFamily:'Poppins-Regular'}} className="text-lg text-[#1F1F1F]">20.00 Ton</Text>
                                 </View>
                             </View>
                             <View className="pt-4">
-                                <Text className="text-[#004D24] text-sm font-bold">Warehouse certificate</Text>
+                                <Text style={{fontFamily:'Poppins-Medium'}} className="text-[#004D24] text-sm font-bold">Warehouse certificate</Text>
                                 <View className="flex flex-row justify-between">
-                                    <Text className="text-lg text-[#898B87]">FFM+ -aggregation.png</Text>
+                                    <Text style={{fontFamily:'Poppins-Regular'}} className="text-lg text-[#898B87]">FFM+ -aggregation.png</Text>
                                     <View className="flex flex-row space-x-2 items-center">
-                                        <Text className="text-lg text-primary">Download </Text>
+                                        <Text style={{fontFamily:'Poppins-Medium'}} className="text-lg text-primary">Download </Text>
                                         <Download/>
                                     </View>
 

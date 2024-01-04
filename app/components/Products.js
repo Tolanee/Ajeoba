@@ -144,15 +144,15 @@ const productScroll = (each, category) => {
         }} className="mx-3">
             <View className="w-full">
                 <Image source={each.image} className="my-3 w-full h-[100px]  rounded-lg"/>
-                <Text className="text-lg">{each.name}</Text>
+                <Text style={{fontFamily:'Poppins-Regular'}} className="text-lg">{each.name}</Text>
                 <View className="flex flex-row space-x-2 items-center py-2">
                     <Image source={require('../../assets/HomeImages/stars.png')}/>
                     <Text>(92)</Text>
                 </View>
                 <View className="flex flex-row space-x-1 items-center">
-                    <Text className="font-bold text-base">₦{each.amount} </Text>
+                    <Text style={{fontFamily:'Poppins-SemiBold'}} className="font-bold text-base">₦{each.amount} </Text>
 
-                    <Text className="italic">
+                    <Text style={{fontFamily:'Poppins-Italic'}} className="italic">
                         (Per kg)
                     </Text>
                 </View>
@@ -169,10 +169,10 @@ export default function Products() {
             {allProducts.map((all, index) => {
                 return <View key={index} className="">
                     <View className="flex flex-row justify-between bg-lightGreen p-4 items-center">
-                        <Text className=" text-base font-bold ">{all.name}</Text>
+                        <Text style={{fontFamily:'Poppins-SemiBold'}} className=" text-base font-bold ">{all.name}</Text>
                         <TouchableOpacity
-                            className="bg-white  border border-2  border-primary rounded-lg p-2 items-center">
-                            <Text className="font-bold text-primary">View All</Text>
+                            className="bg-white  border-2  border-primary rounded-lg p-2 items-center">
+                            <Text style={{fontFamily:'Poppins-SemiBold'}} className="font-bold text-primary">View All</Text>
                         </TouchableOpacity>
                     </View>
 

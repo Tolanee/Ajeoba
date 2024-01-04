@@ -23,14 +23,14 @@ export default function Carousels() {
     ]
     const renderItem = ({item}) => (
         <View className="w-full h-[150] relative  rounded-lg">
-            <Image source={item.image} className="w-full h-full rounded-lg"/>
+            <Image  source={item.image} className="w-full h-full rounded-lg"/>
             <LinearGradient
                 colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.9)']}
                 end={{x: 0.3, y: 0}} // Adjust the x value to control the start position
                 start={{x: 1, y: 0}}
                 style={styles.overlay}
             />
-            <Text className="absolute top-5 px-4 text-white font-bold text-2xl w-2/3">{item.desc}</Text>
+            <Text style={{fontFamily:'Poppins-SemiBold'}} className="absolute top-5 px-4 text-white font-bold text-2xl w-2/3">{item.desc}</Text>
         </View>
     );
 
