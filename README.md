@@ -16,7 +16,7 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. **Clone the repository:**
+1. **Clone the repository:** Using Omotolani as the default branch
 
     ```bash
     git clone https://github.com/Tolanee/Ajeoba.git
@@ -40,3 +40,6 @@ Start the Expo development server:
 
 ```bash
 yarn start
+```
+
+You can either use your simulator by clicking on a for Android or i for IOS simulator, or download the Expo Go app, Scan the QR code with Expo Go (Android) or the Camera app (iOS)
