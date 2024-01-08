@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Redirect } from "expo-router";
-import * as Font from "expo-font";
-import { Text, View } from "react-native";
+// import * as Font from "expo-font";
+import { View, Text } from "react-native";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
-const loadFonts = async () => {
-  await Font.loadAsync({
+SplashScreen.preventAutoHideAsync();
+
+export default function App() {
+  const [fontsLoaded, fontError] = useFonts({
     "Poppins-Bold": require("../assets/fonts/Poppins-Bold.ttf"),
     "Poppins-Medium": require("../assets/fonts/Poppins-Medium.ttf"),
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Italic": require("../assets/fonts/Poppins-Italic.ttf"),
-    "Poppins-Light": require("../assets/fonts/Poppins-Light.ttf"),
+    "Poppins-Light": require("../assets/fonts/Poppins-Light.ttf")
   });
-};
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
-export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  useEffect(() => {
-
-    loadFonts()
-        .then(() => setFontsLoaded(true))
-        .catch((error) => {
-          console.error("Error loading fonts:", error);
-
-        });
-  }, []);
-
-  if (!fontsLoaded) {
-    return <Text>Loading fonts...</Text>;
+  if (!fontsLoaded && !fontError) {
+    return (
+      <View className="flex flex-1 bg-white items-center justify-center">
+        <Text>Loading assets</Text>
+      </View>
+    );
   }
-
-  return <Redirect href="/Home" />
+  return <Redirect href="/Home" />;
 }

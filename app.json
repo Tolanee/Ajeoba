@@ -1,5 +1,8 @@
 {
   "expo": {
+    "plugins": [
+      
+    ],
     "name": "Ajeoba",
     "scheme": "Ajeoba",
     "slug": "Ajeoba",
@@ -26,9 +29,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-router"
-    ]
+    }
+    
   }
 }
+
+
