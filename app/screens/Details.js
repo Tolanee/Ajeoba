@@ -127,10 +127,10 @@ export default function Details() {
                 >
                   Warehouse distribution
                 </Text>
-                <View className="flex flex-row justify-between">
+                <View className="flex flex-row justify-between py-2">
                   <Text
                     style={{ fontFamily: "Poppins-Regular" }}
-                    className="text-sm text-[#898B87]"
+                    className="text-sm text-[#898B87] "
                   >
                     {" "}
                     Gennee Warehousing
@@ -150,10 +150,10 @@ export default function Details() {
                 >
                   Warehouse certificate
                 </Text>
-                <View className="flex flex-row justify-between">
+                <View className="flex flex-row justify-between py-2">
                   <Text
                     style={{ fontFamily: "Poppins-Regular" }}
-                    className="text-sm text-[#898B87]"
+                    className="text-sm text-[#898B87] "
                   >
                     FFM+ -aggregation.png
                   </Text>
@@ -172,7 +172,7 @@ export default function Details() {
           </View>
         </View>
       </ScrollView>
-      <View className="p-3 flex flex-row w-full items-center justify-around border-t border-t-2 border-[#F1F1F1] ">
+      <View className="p-3 flex flex-row w-full items-center justify-around  border-t-2 border-[#F1F1F1] ">
         <View className="border-2 border-primary bg-lightGreen flex flex-row items-center rounded-lg p-3">
           <Pressable onPress={() => (count > 0 ? setCount(count - 1) : count)}>
             <Minus />
